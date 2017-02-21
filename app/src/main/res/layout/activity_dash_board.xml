@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_dash_board"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="makers.ar_d.firebaseauthentication.DashBoard">
+
+    <!-- TODO: 11 UI design -->
+
+    <ImageView
+        android:id="@+id/icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/google_firebase" />
+
+    <TextView
+        android:id="@+id/dashboard_welcome"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/icon"
+        android:layout_centerHorizontal="true"
+        android:text="Welcome, User"
+        android:textColor="@color/colorPrimaryDark" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/dashboard_input_new_password"
+        app:passwordToggleEnabled="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/dashboard_welcome">
+
+        <EditText
+            android:id="@+id/dashboard_new_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter new password"
+            android:inputType="textPassword"
+            android:maxLines="1" />
+    </android.support.design.widget.TextInputLayout>
+
+    <Button
+        android:id="@+id/dashboard_btn_change_pass"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dashboard_input_new_password"
+        android:background="#236238"
+        android:text="Change Password " />
+
+    <Button
+        android:id="@+id/dashboard_btn_logout"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dashboard_btn_change_pass"
+        android:layout_marginTop="10dp"
+        android:background="#236238"
+        android:text="Logout" />
+
+
+</RelativeLayout>
